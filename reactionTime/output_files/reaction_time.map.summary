@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Sep 29 19:29:19 2025
+Analysis & Synthesis Status : Successful - Mon Sep 29 20:10:46 2025
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : reaction_time
 Top-level Entity Name : reaction_time
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 130
-Total pins : 19
+Total registers : 126
+Total pins : 17
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -67,13 +67,11 @@ set_location_assignment PIN_AA2 -to anode_select[0]
 set_location_assignment PIN_AA1 -to anode_select[1]
 set_location_assignment PIN_W2 -to anode_select[2]
 set_location_assignment PIN_Y3 -to anode_select[3]
-set_location_assignment PIN_U7 -to player_buttons[0]
+set_location_assignment PIN_M6 -to player_buttons[0]
 set_location_assignment PIN_W9 -to player_buttons[1]
-set_location_assignment PIN_M7 -to player_buttons[2]
-set_location_assignment PIN_M6 -to player_buttons[3]
 set_location_assignment PIN_U13 -to reset
 set_location_assignment PIN_V13 -to start_button
-set_location_assignment PIN_N2 -to start_led
+set_location_assignment PIN_M7 -to start_led
 set_location_assignment PIN_U21 -to segment_select[0]
 set_location_assignment PIN_V21 -to segment_select[1]
 set_location_assignment PIN_W22 -to segment_select[2]

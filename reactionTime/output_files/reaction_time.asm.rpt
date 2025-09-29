@@ -1,5 +1,5 @@
 Assembler report for reaction_time
-Mon Sep 29 19:29:45 2025
+Mon Sep 29 20:11:08 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Sep 29 19:29:45 2025 ;
+; Assembler Status      ; Successful - Mon Sep 29 20:11:08 2025 ;
 ; Revision Name         ; reaction_time                         ;
 ; Top-level Entity Name ; reaction_time                         ;
 ; Family                ; Cyclone V                             ;
@@ -53,13 +53,13 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------------------------------------+
-; Assembler Generated Files                                                       ;
-+---------------------------------------------------------------------------------+
-; File Name                                                                       ;
-+---------------------------------------------------------------------------------+
-; /home/alexandre/intelFPGA_lite/20.1/reactionTime/output_files/reaction_time.sof ;
-+---------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                          ;
++----------------------------------------------------------------------------------------------------+
+; File Name                                                                                          ;
++----------------------------------------------------------------------------------------------------+
+; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/output_files/reaction_time.sof ;
++----------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+----------------------------+
 ; Option         ; Setting                    ;
 +----------------+----------------------------+
-; JTAG usercode  ; 0x00651141                 ;
-; Checksum       ; 0x00651141                 ;
+; JTAG usercode  ; 0x006532C1                 ;
+; Checksum       ; 0x006532C1                 ;
 +----------------+----------------------------+
 
 
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 29 19:29:43 2025
+    Info: Processing started: Mon Sep 29 20:11:06 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off reaction_game -c reaction_time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 485 megabytes
-    Info: Processing ended: Mon Sep 29 19:29:45 2025
+    Info: Peak virtual memory: 488 megabytes
+    Info: Processing ended: Mon Sep 29 20:11:08 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

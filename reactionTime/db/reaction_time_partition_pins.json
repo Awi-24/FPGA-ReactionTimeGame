@@ -64,14 +64,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "player_buttons[2]",
-					"strict" : false
-				},
-				{
-					"name" : "player_buttons[3]",
-					"strict" : false
-				},
-				{
 					"name" : "player_buttons[1]",
 					"strict" : false
 				},

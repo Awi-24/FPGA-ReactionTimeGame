@@ -2,8 +2,6 @@
 clk => button_debouncer:debouncer_start.clk
 clk => button_debouncer:debouncers_player:0:debouncer_inst.clk
 clk => button_debouncer:debouncers_player:1:debouncer_inst.clk
-clk => button_debouncer:debouncers_player:2:debouncer_inst.clk
-clk => button_debouncer:debouncers_player:3:debouncer_inst.clk
 clk => random_delay:random_gen.clk
 clk => reaction_timer:timer.clk
 clk => seven_segment_driver:display_driver.clk
@@ -12,8 +10,6 @@ reset => current_state~3.DATAIN
 start_button => button_debouncer:debouncer_start.button_in
 player_buttons[0] => button_debouncer:debouncers_player:0:debouncer_inst.button_in
 player_buttons[1] => button_debouncer:debouncers_player:1:debouncer_inst.button_in
-player_buttons[2] => button_debouncer:debouncers_player:2:debouncer_inst.button_in
-player_buttons[3] => button_debouncer:debouncers_player:3:debouncer_inst.button_in
 start_led <= start_led.DB_MAX_OUTPUT_PORT_TYPE
 anode_select[0] <= seven_segment_driver:display_driver.anodes[0]
 anode_select[1] <= seven_segment_driver:display_driver.anodes[1]
@@ -43,20 +39,6 @@ button_out <= button_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |reaction_time|button_debouncer:\debouncers_player:1:debouncer_inst
-clk => q2.CLK
-clk => q1.CLK
-button_in => q1.DATAIN
-button_out <= button_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|reaction_time|button_debouncer:\debouncers_player:2:debouncer_inst
-clk => q2.CLK
-clk => q1.CLK
-button_in => q1.DATAIN
-button_out <= button_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|reaction_time|button_debouncer:\debouncers_player:3:debouncer_inst
 clk => q2.CLK
 clk => q1.CLK
 button_in => q1.DATAIN

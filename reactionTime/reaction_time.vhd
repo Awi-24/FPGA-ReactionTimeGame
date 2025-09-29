@@ -7,7 +7,8 @@ entity reaction_time is
         clk             : in  STD_LOGIC;
         reset           : in  STD_LOGIC;
         start_button    : in  STD_LOGIC;
-        player_buttons  : in  STD_LOGIC_VECTOR(3 downto 0);
+        -- MUDANÇA: Vetor de botões agora tem 2 bits (para jogador 1 e 2)
+        player_buttons  : in  STD_LOGIC_VECTOR(1 downto 0);
         start_led       : out STD_LOGIC;
         anode_select    : out STD_LOGIC_VECTOR(3 downto 0);
         segment_select  : out STD_LOGIC_VECTOR(6 downto 0)
@@ -21,26 +22,28 @@ architecture Behavioral of reaction_time is
 
     -- Sinais para os módulos
     signal debounced_start_button   : STD_LOGIC;
-    signal debounced_player_buttons : STD_LOGIC_VECTOR(3 downto 0);
+    -- MUDANÇA: Vetor de sinais de debounce agora tem 2 bits
+    signal debounced_player_buttons : STD_LOGIC_VECTOR(1 downto 0);
     signal random_delay_done        : STD_LOGIC;
     signal timer_start_edge         : STD_LOGIC := '0';
     signal timer_stop               : STD_LOGIC;
     signal timer_reset              : STD_LOGIC;
     signal timer_running            : STD_LOGIC;
-    signal reaction_time            : unsigned(15 downto 0); 
-    signal winner                   : unsigned(1 downto 0); 
+    signal reaction_time            : unsigned(15 downto 0);
+    -- MUDANÇA: Sinal de vencedor agora precisa de apenas 1 bit (0 para jogador 1, 1 para jogador 2)
+    signal winner                   : unsigned(0 downto 0);
     signal display_value            : unsigned(15 downto 0);
 
-    -- Sinais de controle da FSM
     signal hold_counter : integer range 0 to 150000000 := 0;
 
 begin
 
-    -- Instanciação dos módulos (sem alterações aqui)
+    -- Instanciação dos módulos
     debouncer_start : entity work.button_debouncer
         port map ( clk => clk, button_in => start_button, button_out => debounced_start_button );
 
-    debouncers_player : for i in 0 to 3 generate
+    -- MUDANÇA: Gerador de instâncias agora cria debouncers para 2 jogadores (índices 0 e 1)
+    debouncers_player : for i in 0 to 1 generate
         debouncer_inst : entity work.button_debouncer
             port map ( clk => clk, button_in => player_buttons(i), button_out => debounced_player_buttons(i) );
     end generate;
@@ -76,7 +79,6 @@ begin
         timer_reset <= '0';
         display_value <= (others => '0');
 
-        -- **CORREÇÃO APLICADA AQUI: Usando os novos nomes de estados**
         case current_state is
             when S_IDLE =>
                 display_value <= to_unsigned(0, 16);
@@ -86,7 +88,7 @@ begin
                 end if;
 
             when S_RANDOM_DELAY =>
-                timer_start_edge <= '1'; 
+                timer_start_edge <= '1';
                 if random_delay_done = '1' then
                     next_state <= S_TIMING;
                 end if;
@@ -95,10 +97,12 @@ begin
                 start_led <= '1';
                 timer_running <= '1';
                 timer_stop <= '0';
-                for i in 0 to 3 loop
+                -- MUDANÇA: Loop agora verifica apenas 2 jogadores
+                for i in 0 to 1 loop
                     if debounced_player_buttons(i) = '1' then
                         timer_stop <= '1';
-                        winner <= to_unsigned(i, 2);
+                        -- MUDANÇA: Converte 'i' para um unsigned de 1 bit
+                        winner <= to_unsigned(i, 1);
                         next_state <= S_WINNER;
                     end if;
                 end loop;
@@ -108,14 +112,13 @@ begin
                 next_state <= S_DISPLAY_WINNER;
 
             when S_DISPLAY_WINNER =>
+                -- MUDANÇA: Lógica de exibição simplificada para 2 jogadores
                 case winner is
-                    when "00" => display_value <= to_unsigned(1, 16); -- Jogador 1
-                    when "01" => display_value <= to_unsigned(2, 16); -- Jogador 2
-                    when "10" => display_value <= to_unsigned(3, 16); -- Jogador 3
-                    when "11" => display_value <= to_unsigned(4, 16); -- Jogador 4
-                    when others => display_value <= to_unsigned(99, 16);
+                    when "0" => display_value <= to_unsigned(1, 16); -- Jogador 1
+                    when "1" => display_value <= to_unsigned(2, 16); -- Jogador 2
+                    when others => display_value <= to_unsigned(99, 16); -- Erro
                 end case;
-                
+
                 if hold_counter < 50000000 then -- ~1 segundo
                     hold_counter <= hold_counter + 1;
                 else

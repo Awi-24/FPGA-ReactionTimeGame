@@ -1,5 +1,5 @@
 Analysis & Synthesis report for reaction_time
-Mon Sep 29 19:29:19 2025
+Mon Sep 29 20:10:46 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -55,14 +55,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 29 19:29:19 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 29 20:10:46 2025       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; reaction_time                               ;
 ; Top-level Entity Name           ; reaction_time                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 130                                         ;
-; Total pins                      ; 19                                          ;
+; Total registers                 ; 126                                         ;
+; Total pins                      ; 17                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -185,33 +185,33 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
-; reaction_time.vhd                ; yes             ; User VHDL File               ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd                      ;         ;
-; button_debouncer.vhd             ; yes             ; User VHDL File               ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/button_debouncer.vhd                   ;         ;
-; random_delay.vhd                 ; yes             ; User VHDL File               ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/random_delay.vhd                       ;         ;
-; reaction_timer.vhd               ; yes             ; User VHDL File               ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_timer.vhd                     ;         ;
-; seven_segment_driver.vhd         ; yes             ; User VHDL File               ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd               ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
-; db/lpm_divide_a5m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_a5m.tdf                  ;         ;
-; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_dnh.tdf             ;         ;
-; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_03f.tdf                   ;         ;
-; db/lpm_divide_kbm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_kbm.tdf                  ;         ;
-; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_qlh.tdf             ;         ;
-; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_qve.tdf                   ;         ;
-; db/lpm_divide_nbm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_nbm.tdf                  ;         ;
-; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_tlh.tdf             ;         ;
-; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_00f.tdf                   ;         ;
-; db/lpm_divide_1dm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_1dm.tdf                  ;         ;
-; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_7nh.tdf             ;         ;
-; db/alt_u_div_k2f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_k2f.tdf                   ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; reaction_time.vhd                ; yes             ; User VHDL File               ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd          ;         ;
+; button_debouncer.vhd             ; yes             ; User VHDL File               ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/button_debouncer.vhd       ;         ;
+; random_delay.vhd                 ; yes             ; User VHDL File               ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/random_delay.vhd           ;         ;
+; reaction_timer.vhd               ; yes             ; User VHDL File               ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_timer.vhd         ;         ;
+; seven_segment_driver.vhd         ; yes             ; User VHDL File               ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf             ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc            ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/alexandre/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc             ;         ;
+; db/lpm_divide_a5m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_a5m.tdf      ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_dnh.tdf ;         ;
+; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_03f.tdf       ;         ;
+; db/lpm_divide_kbm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_kbm.tdf      ;         ;
+; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_qlh.tdf ;         ;
+; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_qve.tdf       ;         ;
+; db/lpm_divide_nbm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_nbm.tdf      ;         ;
+; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_tlh.tdf ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_00f.tdf       ;         ;
+; db/lpm_divide_1dm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_1dm.tdf      ;         ;
+; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_7nh.tdf ;         ;
+; db/alt_u_div_k2f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_k2f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------+
@@ -219,25 +219,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 870                          ;
+; Estimate of Logic utilization (ALMs needed) ; 867                          ;
 ;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 1676                         ;
+; Combinational ALUT usage for logic          ; 1668                         ;
 ;     -- 7 input functions                    ; 0                            ;
-;     -- 6 input functions                    ; 57                           ;
-;     -- 5 input functions                    ; 30                           ;
-;     -- 4 input functions                    ; 431                          ;
-;     -- <=3 input functions                  ; 1158                         ;
+;     -- 6 input functions                    ; 60                           ;
+;     -- 5 input functions                    ; 28                           ;
+;     -- 4 input functions                    ; 426                          ;
+;     -- <=3 input functions                  ; 1154                         ;
 ;                                             ;                              ;
-; Dedicated logic registers                   ; 130                          ;
+; Dedicated logic registers                   ; 126                          ;
 ;                                             ;                              ;
-; I/O pins                                    ; 19                           ;
+; I/O pins                                    ; 17                           ;
 ;                                             ;                              ;
 ; Total DSP Blocks                            ; 0                            ;
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; current_state.S_DISPLAY_TIME ;
-; Maximum fan-out                             ; 192                          ;
-; Total fan-out                               ; 5753                         ;
-; Average fan-out                             ; 3.12                         ;
+; Maximum fan-out                             ; 199                          ;
+; Total fan-out                               ; 5714                         ;
+; Average fan-out                             ; 3.13                         ;
 +---------------------------------------------+------------------------------+
 
 
@@ -246,15 +246,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                ; Entity Name          ; Library Name ;
 +-----------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |reaction_time                                            ; 1676 (116)          ; 130 (6)                   ; 0                 ; 0          ; 19   ; 0            ; |reaction_time                                                                                                                                     ; reaction_time        ; work         ;
+; |reaction_time                                            ; 1668 (109)          ; 126 (6)                   ; 0                 ; 0          ; 17   ; 0            ; |reaction_time                                                                                                                                     ; reaction_time        ; work         ;
 ;    |button_debouncer:\debouncers_player:0:debouncer_inst| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|button_debouncer:\debouncers_player:0:debouncer_inst                                                                                ; button_debouncer     ; work         ;
-;    |button_debouncer:\debouncers_player:1:debouncer_inst| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|button_debouncer:\debouncers_player:1:debouncer_inst                                                                                ; button_debouncer     ; work         ;
-;    |button_debouncer:\debouncers_player:2:debouncer_inst| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|button_debouncer:\debouncers_player:2:debouncer_inst                                                                                ; button_debouncer     ; work         ;
-;    |button_debouncer:\debouncers_player:3:debouncer_inst| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|button_debouncer:\debouncers_player:3:debouncer_inst                                                                                ; button_debouncer     ; work         ;
+;    |button_debouncer:\debouncers_player:1:debouncer_inst| ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|button_debouncer:\debouncers_player:1:debouncer_inst                                                                                ; button_debouncer     ; work         ;
 ;    |button_debouncer:debouncer_start|                     ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|button_debouncer:debouncer_start                                                                                                    ; button_debouncer     ; work         ;
 ;    |random_delay:random_gen|                              ; 70 (70)             ; 59 (59)                   ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|random_delay:random_gen                                                                                                             ; random_delay         ; work         ;
 ;    |reaction_timer:timer|                                 ; 39 (39)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|reaction_timer:timer                                                                                                                ; reaction_timer       ; work         ;
-;    |seven_segment_driver:display_driver|                  ; 1451 (44)           ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|seven_segment_driver:display_driver                                                                                                 ; seven_segment_driver ; work         ;
+;    |seven_segment_driver:display_driver|                  ; 1449 (42)           ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|seven_segment_driver:display_driver                                                                                                 ; seven_segment_driver ; work         ;
 ;       |lpm_divide:Div0|                                   ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|seven_segment_driver:display_driver|lpm_divide:Div0                                                                                 ; lpm_divide           ; work         ;
 ;          |lpm_divide_kbm:auto_generated|                  ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|seven_segment_driver:display_driver|lpm_divide:Div0|lpm_divide_kbm:auto_generated                                                   ; lpm_divide_kbm       ; work         ;
 ;             |sign_div_unsign_qlh:divider|                 ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_time|seven_segment_driver:display_driver|lpm_divide:Div0|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh  ; work         ;
@@ -307,37 +305,36 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; winner[0]                                           ; winner[0]           ; yes                    ;
-; winner[1]                                           ; winner[0]           ; yes                    ;
-; hold_counter[27]                                    ; WideOr3             ; yes                    ;
-; hold_counter[24]                                    ; WideOr3             ; yes                    ;
-; hold_counter[25]                                    ; WideOr3             ; yes                    ;
-; hold_counter[26]                                    ; WideOr3             ; yes                    ;
-; hold_counter[20]                                    ; WideOr3             ; yes                    ;
-; hold_counter[21]                                    ; WideOr3             ; yes                    ;
-; hold_counter[22]                                    ; WideOr3             ; yes                    ;
-; hold_counter[23]                                    ; WideOr3             ; yes                    ;
-; hold_counter[16]                                    ; WideOr3             ; yes                    ;
-; hold_counter[17]                                    ; WideOr3             ; yes                    ;
-; hold_counter[18]                                    ; WideOr3             ; yes                    ;
-; hold_counter[19]                                    ; WideOr3             ; yes                    ;
-; hold_counter[14]                                    ; WideOr3             ; yes                    ;
-; hold_counter[15]                                    ; WideOr3             ; yes                    ;
-; hold_counter[13]                                    ; WideOr3             ; yes                    ;
-; hold_counter[12]                                    ; WideOr3             ; yes                    ;
-; hold_counter[9]                                     ; WideOr3             ; yes                    ;
-; hold_counter[10]                                    ; WideOr3             ; yes                    ;
-; hold_counter[11]                                    ; WideOr3             ; yes                    ;
-; hold_counter[7]                                     ; WideOr3             ; yes                    ;
-; hold_counter[8]                                     ; WideOr3             ; yes                    ;
-; hold_counter[6]                                     ; WideOr3             ; yes                    ;
-; hold_counter[5]                                     ; WideOr3             ; yes                    ;
-; hold_counter[4]                                     ; WideOr3             ; yes                    ;
-; hold_counter[3]                                     ; WideOr3             ; yes                    ;
-; hold_counter[2]                                     ; WideOr3             ; yes                    ;
-; hold_counter[1]                                     ; WideOr3             ; yes                    ;
-; hold_counter[0]                                     ; WideOr3             ; yes                    ;
-; Number of user-specified and inferred latches = 30  ;                     ;                        ;
+; winner[0]                                           ; Selector6           ; yes                    ;
+; hold_counter[27]                                    ; WideOr2             ; yes                    ;
+; hold_counter[24]                                    ; WideOr2             ; yes                    ;
+; hold_counter[25]                                    ; WideOr2             ; yes                    ;
+; hold_counter[26]                                    ; WideOr2             ; yes                    ;
+; hold_counter[20]                                    ; WideOr2             ; yes                    ;
+; hold_counter[21]                                    ; WideOr2             ; yes                    ;
+; hold_counter[22]                                    ; WideOr2             ; yes                    ;
+; hold_counter[23]                                    ; WideOr2             ; yes                    ;
+; hold_counter[16]                                    ; WideOr2             ; yes                    ;
+; hold_counter[17]                                    ; WideOr2             ; yes                    ;
+; hold_counter[18]                                    ; WideOr2             ; yes                    ;
+; hold_counter[19]                                    ; WideOr2             ; yes                    ;
+; hold_counter[14]                                    ; WideOr2             ; yes                    ;
+; hold_counter[15]                                    ; WideOr2             ; yes                    ;
+; hold_counter[13]                                    ; WideOr2             ; yes                    ;
+; hold_counter[12]                                    ; WideOr2             ; yes                    ;
+; hold_counter[9]                                     ; WideOr2             ; yes                    ;
+; hold_counter[10]                                    ; WideOr2             ; yes                    ;
+; hold_counter[11]                                    ; WideOr2             ; yes                    ;
+; hold_counter[7]                                     ; WideOr2             ; yes                    ;
+; hold_counter[8]                                     ; WideOr2             ; yes                    ;
+; hold_counter[6]                                     ; WideOr2             ; yes                    ;
+; hold_counter[5]                                     ; WideOr2             ; yes                    ;
+; hold_counter[4]                                     ; WideOr2             ; yes                    ;
+; hold_counter[3]                                     ; WideOr2             ; yes                    ;
+; hold_counter[2]                                     ; WideOr2             ; yes                    ;
+; hold_counter[1]                                     ; WideOr2             ; yes                    ;
+; hold_counter[0]                                     ; WideOr2             ; yes                    ;
+; Number of user-specified and inferred latches = 29  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -362,7 +359,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 130   ;
+; Total registers                              ; 126   ;
 ; Number of registers using Synchronous Clear  ; 63    ;
 ; Number of registers using Synchronous Load   ; 23    ;
 ; Number of registers using Asynchronous Clear ; 39    ;
@@ -395,9 +392,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; 3:1                ; 27 bits   ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |reaction_time|random_delay:random_gen|delay_counter[23] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |reaction_time|seven_segment_driver:display_driver|Mux7  ;
-; 5:1                ; 28 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |reaction_time|Selector16                                ;
-; 14:1               ; 6 bits    ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; No         ; |reaction_time|Selector7                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |reaction_time|seven_segment_driver:display_driver|Mux5  ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |reaction_time|Selector15                                ;
+; 12:1               ; 6 bits    ; 48 LEs        ; 30 LEs               ; 18 LEs                 ; No         ; |reaction_time|Selector6                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
@@ -567,35 +564,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 130                         ;
+; arriav_ff             ; 126                         ;
 ;     CLR               ; 7                           ;
 ;     ENA CLR           ; 16                          ;
 ;     ENA CLR SCLR      ; 16                          ;
 ;     ENA SCLR          ; 27                          ;
 ;     SCLR              ; 20                          ;
 ;     SLD               ; 23                          ;
-;     plain             ; 21                          ;
-; arriav_lcell_comb     ; 1677                        ;
+;     plain             ; 17                          ;
+; arriav_lcell_comb     ; 1669                        ;
 ;     arith             ; 880                         ;
 ;         0 data inputs ; 144                         ;
 ;         1 data inputs ; 169                         ;
-;         2 data inputs ; 74                          ;
-;         3 data inputs ; 237                         ;
+;         2 data inputs ; 78                          ;
+;         3 data inputs ; 233                         ;
 ;         4 data inputs ; 256                         ;
-;     normal            ; 779                         ;
+;     normal            ; 771                         ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 355                         ;
-;         3 data inputs ; 156                         ;
-;         4 data inputs ; 175                         ;
-;         5 data inputs ; 30                          ;
-;         6 data inputs ; 57                          ;
+;         2 data inputs ; 356                         ;
+;         3 data inputs ; 151                         ;
+;         4 data inputs ; 170                         ;
+;         5 data inputs ; 28                          ;
+;         6 data inputs ; 60                          ;
 ;     shared            ; 18                          ;
 ;         0 data inputs ; 12                          ;
 ;         1 data inputs ; 6                           ;
-; boundary_port         ; 19                          ;
+; boundary_port         ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 32.20                       ;
-; Average LUT depth     ; 22.33                       ;
+; Average LUT depth     ; 22.40                       ;
 +-----------------------+-----------------------------+
 
 
@@ -604,7 +601,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -614,133 +611,130 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 29 19:29:11 2025
+    Info: Processing started: Mon Sep 29 20:10:39 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off reaction_game -c reaction_time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file reaction_time.vhd
-    Info (12022): Found design unit 1: reaction_time-Behavioral File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 17
-    Info (12023): Found entity 1: reaction_time File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 5
+    Info (12022): Found design unit 1: reaction_time-Behavioral File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 18
+    Info (12023): Found entity 1: reaction_time File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file button_debouncer.vhd
-    Info (12022): Found design unit 1: button_debouncer-Behavioral File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/button_debouncer.vhd Line: 13
-    Info (12023): Found entity 1: button_debouncer File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/button_debouncer.vhd Line: 5
+    Info (12022): Found design unit 1: button_debouncer-Behavioral File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/button_debouncer.vhd Line: 13
+    Info (12023): Found entity 1: button_debouncer File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/button_debouncer.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file random_delay.vhd
-    Info (12022): Found design unit 1: random_delay-Behavioral File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/random_delay.vhd Line: 13
-    Info (12023): Found entity 1: random_delay File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/random_delay.vhd Line: 5
+    Info (12022): Found design unit 1: random_delay-Behavioral File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/random_delay.vhd Line: 13
+    Info (12023): Found entity 1: random_delay File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/random_delay.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reaction_timer.vhd
-    Info (12022): Found design unit 1: reaction_timer-Behavioral File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_timer.vhd Line: 15
-    Info (12023): Found entity 1: reaction_timer File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_timer.vhd Line: 5
+    Info (12022): Found design unit 1: reaction_timer-Behavioral File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_timer.vhd Line: 15
+    Info (12023): Found entity 1: reaction_timer File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_timer.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file seven_segment_driver.vhd
-    Info (12022): Found design unit 1: seven_segment_driver-Behavioral File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 14
-    Info (12023): Found entity 1: seven_segment_driver File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 5
+    Info (12022): Found design unit 1: seven_segment_driver-Behavioral File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 14
+    Info (12023): Found entity 1: seven_segment_driver File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 5
 Info (12127): Elaborating entity "reaction_time" for the top level hierarchy
-Warning (10631): VHDL Process Statement warning at reaction_time.vhd(68): inferring latch(es) for signal or variable "winner", which holds its previous value in one or more paths through the process File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Warning (10631): VHDL Process Statement warning at reaction_time.vhd(68): inferring latch(es) for signal or variable "hold_counter", which holds its previous value in one or more paths through the process File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[0]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[1]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[2]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[3]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[4]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[5]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[6]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[7]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[8]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[9]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[10]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[11]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[12]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[13]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[14]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[15]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[16]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[17]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[18]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[19]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[20]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[21]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[22]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[23]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[24]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[25]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[26]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "hold_counter[27]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "winner[0]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (10041): Inferred latch for "winner[1]" at reaction_time.vhd(68) File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-Info (12128): Elaborating entity "button_debouncer" for hierarchy "button_debouncer:debouncer_start" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 40
-Info (12128): Elaborating entity "random_delay" for hierarchy "random_delay:random_gen" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 48
-Info (12128): Elaborating entity "reaction_timer" for hierarchy "reaction_timer:timer" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 51
-Info (12128): Elaborating entity "seven_segment_driver" for hierarchy "seven_segment_driver:display_driver" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 54
+Warning (10631): VHDL Process Statement warning at reaction_time.vhd(71): inferring latch(es) for signal or variable "winner", which holds its previous value in one or more paths through the process File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Warning (10631): VHDL Process Statement warning at reaction_time.vhd(71): inferring latch(es) for signal or variable "hold_counter", which holds its previous value in one or more paths through the process File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[0]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[1]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[2]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[3]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[4]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[5]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[6]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[7]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[8]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[9]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[10]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[11]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[12]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[13]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[14]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[15]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[16]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[17]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[18]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[19]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[20]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[21]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[22]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[23]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[24]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[25]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[26]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "hold_counter[27]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (10041): Inferred latch for "winner[0]" at reaction_time.vhd(71) File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+Info (12128): Elaborating entity "button_debouncer" for hierarchy "button_debouncer:debouncer_start" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 42
+Info (12128): Elaborating entity "random_delay" for hierarchy "random_delay:random_gen" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 51
+Info (12128): Elaborating entity "reaction_timer" for hierarchy "reaction_timer:timer" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 54
+Info (12128): Elaborating entity "seven_segment_driver" for hierarchy "seven_segment_driver:display_driver" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 57
 Info (278001): Inferred 7 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod0" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 58
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Div0" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 61
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod1" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 61
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Div1" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 64
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod2" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 64
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Div2" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 67
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod3" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 67
-Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Mod0" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 58
-Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Mod0" with the following parameter: File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod0" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Div0" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 61
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod1" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 61
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Div1" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 64
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod2" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 64
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Div2" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 67
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_driver:display_driver|Mod3" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 67
+Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Mod0" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 58
+Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Mod0" with the following parameter: File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 58
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_a5m.tdf
-    Info (12023): Found entity 1: lpm_divide_a5m File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_a5m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_a5m File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_a5m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dnh File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_dnh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_dnh File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_dnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
-    Info (12023): Found entity 1: alt_u_div_03f File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_03f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Div0" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 61
-Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Div0" with the following parameter: File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 61
+    Info (12023): Found entity 1: alt_u_div_03f File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_03f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Div0" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 61
+Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Div0" with the following parameter: File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 61
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kbm.tdf
-    Info (12023): Found entity 1: lpm_divide_kbm File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_kbm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_kbm File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_kbm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_qlh File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_qlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_qlh File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
-    Info (12023): Found entity 1: alt_u_div_qve File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_qve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Div1" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 64
-Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Div1" with the following parameter: File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 64
+    Info (12023): Found entity 1: alt_u_div_qve File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_qve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Div1" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 64
+Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Div1" with the following parameter: File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 64
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_nbm.tdf
-    Info (12023): Found entity 1: lpm_divide_nbm File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_nbm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_nbm File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_nbm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_tlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_tlh File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_tlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_tlh File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_tlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
-    Info (12023): Found entity 1: alt_u_div_00f File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_00f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Div2" File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 67
-Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Div2" with the following parameter: File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/seven_segment_driver.vhd Line: 67
+    Info (12023): Found entity 1: alt_u_div_00f File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_00f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "seven_segment_driver:display_driver|lpm_divide:Div2" File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 67
+Info (12133): Instantiated megafunction "seven_segment_driver:display_driver|lpm_divide:Div2" with the following parameter: File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/seven_segment_driver.vhd Line: 67
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1dm.tdf
-    Info (12023): Found entity 1: lpm_divide_1dm File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/lpm_divide_1dm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_1dm File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/lpm_divide_1dm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7nh File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/sign_div_unsign_7nh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_7nh File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/sign_div_unsign_7nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_k2f.tdf
-    Info (12023): Found entity 1: alt_u_div_k2f File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/db/alt_u_div_k2f.tdf Line: 23
-Warning (13012): Latch winner[0] has unsafe behavior File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal button_debouncer:\debouncers_player:3:debouncer_inst|button_out File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/button_debouncer.vhd Line: 9
-Warning (13012): Latch winner[1] has unsafe behavior File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/reaction_time.vhd Line: 68
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal button_debouncer:\debouncers_player:2:debouncer_inst|button_out File: /home/alexandre/intelFPGA_lite/20.1/reactionTime/button_debouncer.vhd Line: 9
+    Info (12023): Found entity 1: alt_u_div_k2f File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/db/alt_u_div_k2f.tdf Line: 23
+Warning (13012): Latch winner[0] has unsafe behavior File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/reaction_time.vhd Line: 71
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal button_debouncer:\debouncers_player:1:debouncer_inst|button_out File: /home/alexandre/Documents/github/FPGA-ReactionTimeGame/reactionTime/button_debouncer.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1712 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 1698 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 1693 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 547 megabytes
-    Info: Processing ended: Mon Sep 29 19:29:19 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 1681 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 577 megabytes
+    Info: Processing ended: Mon Sep 29 20:10:46 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 

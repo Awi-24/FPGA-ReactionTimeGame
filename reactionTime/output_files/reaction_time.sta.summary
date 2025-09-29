@@ -2,180 +2,180 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'current_state.S_IDLE'
-Slack : -7.141
-TNS   : -158.631
-
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -7.032
-TNS   : -507.415
+Slack : -6.564
+TNS   : -504.730
+
+Type  : Slow 1100mV 85C Model Setup 'current_state.S_IDLE'
+Slack : -6.040
+TNS   : -150.630
 
 Type  : Slow 1100mV 85C Model Setup 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : -3.688
-TNS   : -7.365
+Slack : -3.971
+TNS   : -3.971
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.347
+Slack : 0.329
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'current_state.S_IDLE'
-Slack : 1.146
+Slack : 0.725
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 1.909
+Slack : 2.650
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'clk'
-Slack : -1.919
-TNS   : -62.253
+Slack : -2.137
+TNS   : -67.384
 
 Type  : Slow 1100mV 85C Model Removal 'clk'
-Slack : 0.780
+Slack : 0.774
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -124.638
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 0.182
-TNS   : 0.000
+TNS   : -120.076
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'current_state.S_IDLE'
-Slack : 0.205
+Slack : 0.105
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'current_state.S_IDLE'
-Slack : -7.017
-TNS   : -158.959
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
+Slack : 0.329
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -6.799
-TNS   : -486.205
+Slack : -6.319
+TNS   : -480.769
+
+Type  : Slow 1100mV 0C Model Setup 'current_state.S_IDLE'
+Slack : -5.988
+TNS   : -150.858
 
 Type  : Slow 1100mV 0C Model Setup 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : -3.993
-TNS   : -7.888
+Slack : -4.102
+TNS   : -4.102
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.188
+Slack : 0.261
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'current_state.S_IDLE'
-Slack : 1.101
+Slack : 0.728
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 1.919
+Slack : 2.625
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'clk'
-Slack : -1.602
-TNS   : -52.578
+Slack : -1.783
+TNS   : -55.683
 
 Type  : Slow 1100mV 0C Model Removal 'clk'
-Slack : 0.429
+Slack : 0.378
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -127.407
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 0.223
-TNS   : 0.000
+TNS   : -122.970
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'current_state.S_IDLE'
-Slack : 0.230
+Slack : 0.137
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
+Slack : 0.302
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.733
-TNS   : -182.383
+Slack : -3.543
+TNS   : -191.603
 
 Type  : Fast 1100mV 85C Model Setup 'current_state.S_IDLE'
-Slack : -3.330
-TNS   : -67.104
+Slack : -2.629
+TNS   : -63.434
 
 Type  : Fast 1100mV 85C Model Setup 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : -1.392
-TNS   : -2.755
+Slack : -1.502
+TNS   : -1.502
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.177
+Slack : 0.165
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'current_state.S_IDLE'
-Slack : 0.566
+Slack : 0.308
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 1.199
+Slack : 1.526
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'clk'
-Slack : -1.081
-TNS   : -33.988
+Slack : -1.371
+TNS   : -43.090
 
 Type  : Fast 1100mV 85C Model Removal 'clk'
-Slack : 0.338
+Slack : 0.463
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.099
-TNS   : -15.221
+Slack : -0.096
+TNS   : -14.490
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'current_state.S_IDLE'
-Slack : 0.332
+Slack : 0.298
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 0.381
+Slack : 0.430
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -3.175
-TNS   : -149.750
+Slack : -3.017
+TNS   : -155.658
 
 Type  : Fast 1100mV 0C Model Setup 'current_state.S_IDLE'
-Slack : -3.091
-TNS   : -63.081
+Slack : -2.454
+TNS   : -60.133
 
 Type  : Fast 1100mV 0C Model Setup 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : -1.338
-TNS   : -2.671
+Slack : -1.424
+TNS   : -1.424
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.084
+Slack : 0.111
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'current_state.S_IDLE'
-Slack : 0.517
+Slack : 0.290
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 1.182
+Slack : 1.478
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'clk'
-Slack : -0.729
-TNS   : -22.772
+Slack : -0.929
+TNS   : -28.810
 
 Type  : Fast 1100mV 0C Model Removal 'clk'
-Slack : 0.097
+Slack : 0.184
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.100
-TNS   : -15.428
+Slack : -0.097
+TNS   : -14.688
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'current_state.S_IDLE'
-Slack : 0.348
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'button_debouncer:\debouncers_player:0:debouncer_inst|q1'
-Slack : 0.399
+Slack : 0.433
 TNS   : 0.000
 
 ------------------------------------------------------------
