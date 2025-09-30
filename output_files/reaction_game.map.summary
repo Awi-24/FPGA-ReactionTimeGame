@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Sep 30 18:29:46 2025
+Analysis & Synthesis Status : Successful - Tue Sep 30 19:18:38 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : reaction_game
 Top-level Entity Name : reaction_game
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 73
+Total registers : 143
 Total pins : 16
 Total virtual pins : 0
 Total block memory bits : 0

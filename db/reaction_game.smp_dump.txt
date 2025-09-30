@@ -1,14 +1,10 @@
 
 State Machine - |reaction_game|current_state
-Name current_state.RESULT current_state.SHOW_P2 current_state.MEASURE_P2 current_state.WAIT_P2 current_state.GEN_DELAY_P2 current_state.INTERVAL current_state.SHOW_P1 current_state.MEASURE_P1 current_state.WAIT_P1 current_state.GEN_DELAY_P1 current_state.IDLE 
-current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
-current_state.GEN_DELAY_P1 0 0 0 0 0 0 0 0 0 1 1 
-current_state.WAIT_P1 0 0 0 0 0 0 0 0 1 0 1 
-current_state.MEASURE_P1 0 0 0 0 0 0 0 1 0 0 1 
-current_state.SHOW_P1 0 0 0 0 0 0 1 0 0 0 1 
-current_state.INTERVAL 0 0 0 0 0 1 0 0 0 0 1 
-current_state.GEN_DELAY_P2 0 0 0 0 1 0 0 0 0 0 1 
-current_state.WAIT_P2 0 0 0 1 0 0 0 0 0 0 1 
-current_state.MEASURE_P2 0 0 1 0 0 0 0 0 0 0 1 
-current_state.SHOW_P2 0 1 0 0 0 0 0 0 0 0 1 
-current_state.RESULT 1 0 0 0 0 0 0 0 0 0 1 
+Name current_state.RESULT current_state.INTERVAL current_state.SHOW_TIME current_state.MEASURE current_state.WAIT_DELAY current_state.GEN_DELAY current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 
+current_state.GEN_DELAY 0 0 0 0 0 1 1 
+current_state.WAIT_DELAY 0 0 0 0 1 0 1 
+current_state.MEASURE 0 0 0 1 0 0 1 
+current_state.SHOW_TIME 0 0 1 0 0 0 1 
+current_state.INTERVAL 0 1 0 0 0 0 1 
+current_state.RESULT 1 0 0 0 0 0 1 

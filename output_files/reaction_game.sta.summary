@@ -2,148 +2,52 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'btn_response_deb'
-Slack : -10.471
-TNS   : -315.328
-
-Type  : Slow 1100mV 85C Model Setup 'current_state.INTERVAL'
-Slack : -9.793
-TNS   : -186.908
-
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -7.454
-TNS   : -206.327
+Slack : -12.758
+TNS   : -501.831
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -2.533
-TNS   : -4.984
-
-Type  : Slow 1100mV 85C Model Hold 'current_state.INTERVAL'
-Slack : 1.023
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'btn_response_deb'
-Slack : 1.351
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -68.751
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'current_state.INTERVAL'
-Slack : -0.463
-TNS   : -8.424
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn_response_deb'
-Slack : -0.262
-TNS   : -7.079
-
-Type  : Slow 1100mV 0C Model Setup 'btn_response_deb'
-Slack : -10.530
-TNS   : -312.758
-
-Type  : Slow 1100mV 0C Model Setup 'current_state.INTERVAL'
-Slack : -10.131
-TNS   : -189.677
+TNS   : -130.710
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -7.242
-TNS   : -203.611
+Slack : -13.187
+TNS   : -505.901
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -2.585
-TNS   : -5.088
-
-Type  : Slow 1100mV 0C Model Hold 'current_state.INTERVAL'
-Slack : 1.078
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'btn_response_deb'
-Slack : 1.217
+Slack : 0.320
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -70.734
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'current_state.INTERVAL'
-Slack : -0.455
-TNS   : -7.242
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn_response_deb'
-Slack : -0.276
-TNS   : -6.029
-
-Type  : Fast 1100mV 85C Model Setup 'btn_response_deb'
-Slack : -5.186
-TNS   : -144.153
-
-Type  : Fast 1100mV 85C Model Setup 'current_state.INTERVAL'
-Slack : -4.774
-TNS   : -92.103
+TNS   : -133.778
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.678
-TNS   : -69.748
+Slack : -5.575
+TNS   : -163.764
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -1.430
-TNS   : -2.812
-
-Type  : Fast 1100mV 85C Model Hold 'current_state.INTERVAL'
-Slack : 0.329
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'btn_response_deb'
-Slack : 0.731
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.093
-TNS   : -7.675
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'current_state.INTERVAL'
-Slack : -0.009
-TNS   : -0.009
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn_response_deb'
-Slack : 0.091
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'btn_response_deb'
-Slack : -4.608
-TNS   : -130.718
-
-Type  : Fast 1100mV 0C Model Setup 'current_state.INTERVAL'
-Slack : -4.469
-TNS   : -85.865
+TNS   : -14.783
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -3.172
-TNS   : -57.328
+Slack : -5.176
+TNS   : -141.385
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -1.416
-TNS   : -2.785
-
-Type  : Fast 1100mV 0C Model Hold 'current_state.INTERVAL'
-Slack : 0.345
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'btn_response_deb'
-Slack : 0.634
+Slack : 0.164
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.093
-TNS   : -7.926
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'current_state.INTERVAL'
-Slack : 0.039
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn_response_deb'
-Slack : 0.119
-TNS   : 0.000
+Slack : -0.094
+TNS   : -15.090
 
 ------------------------------------------------------------

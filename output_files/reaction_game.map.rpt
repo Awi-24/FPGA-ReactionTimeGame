@@ -1,5 +1,5 @@
 Analysis & Synthesis report for reaction_game
-Tue Sep 30 18:29:47 2025
+Tue Sep 30 19:18:38 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -14,13 +14,15 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |reaction_game|current_state
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +49,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Sep 30 18:29:46 2025           ;
+; Analysis & Synthesis Status     ; Successful - Tue Sep 30 19:18:38 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; reaction_game                                   ;
 ; Top-level Entity Name           ; reaction_game                                   ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 73                                              ;
+; Total registers                 ; 143                                             ;
 ; Total pins                      ; 16                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -167,18 +169,24 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-10        ;   0.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; reaction_game.vhd                ; yes             ; User VHDL File  ; C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+; reaction_game.vhd                ; yes             ; User VHDL File               ; C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_divide.tdf         ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/abs_divider.inc        ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/sign_div_unsign.inc    ;         ;
+; aglobal241.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/aglobal241.inc         ;         ;
+; db/lpm_divide_a5m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/db/lpm_divide_a5m.tdf      ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/db/sign_div_unsign_dnh.tdf ;         ;
+; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/db/alt_u_div_03f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -186,135 +194,84 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 145       ;
+; Estimate of Logic utilization (ALMs needed) ; 157       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 260       ;
+; Combinational ALUT usage for logic          ; 286       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 29        ;
-;     -- 5 input functions                    ; 16        ;
-;     -- 4 input functions                    ; 37        ;
-;     -- <=3 input functions                  ; 178       ;
+;     -- 6 input functions                    ; 24        ;
+;     -- 5 input functions                    ; 26        ;
+;     -- 4 input functions                    ; 35        ;
+;     -- <=3 input functions                  ; 201       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 73        ;
+; Dedicated logic registers                   ; 143       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 16        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 73        ;
-; Total fan-out                               ; 1145      ;
-; Average fan-out                             ; 3.14      ;
+; Maximum fan-out                             ; 143       ;
+; Total fan-out                               ; 1476      ;
+; Average fan-out                             ; 3.20      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; |reaction_game             ; 260 (260)           ; 73 (73)                   ; 0                 ; 0          ; 16   ; 0            ; |reaction_game      ; reaction_game ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                   ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |reaction_game                         ; 286 (159)           ; 143 (143)                 ; 0                 ; 0          ; 16   ; 0            ; |reaction_game                                                                                                 ; reaction_game       ; work         ;
+;    |lpm_divide:Mod0|                   ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_game|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_a5m:auto_generated|  ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_game|lpm_divide:Mod0|lpm_divide_a5m:auto_generated                                                   ; lpm_divide_a5m      ; work         ;
+;          |sign_div_unsign_dnh:divider| ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_game|lpm_divide:Mod0|lpm_divide_a5m:auto_generated|sign_div_unsign_dnh:divider                       ; sign_div_unsign_dnh ; work         ;
+;             |alt_u_div_03f:divider|    ; 127 (127)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |reaction_game|lpm_divide:Mod0|lpm_divide_a5m:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_03f:divider ; alt_u_div_03f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |reaction_game|current_state                                                                                                                                                                                                                                                                    ;
-+----------------------------+----------------------+-----------------------+--------------------------+-----------------------+----------------------------+------------------------+-----------------------+--------------------------+-----------------------+----------------------------+--------------------+
-; Name                       ; current_state.RESULT ; current_state.SHOW_P2 ; current_state.MEASURE_P2 ; current_state.WAIT_P2 ; current_state.GEN_DELAY_P2 ; current_state.INTERVAL ; current_state.SHOW_P1 ; current_state.MEASURE_P1 ; current_state.WAIT_P1 ; current_state.GEN_DELAY_P1 ; current_state.IDLE ;
-+----------------------------+----------------------+-----------------------+--------------------------+-----------------------+----------------------------+------------------------+-----------------------+--------------------------+-----------------------+----------------------------+--------------------+
-; current_state.IDLE         ; 0                    ; 0                     ; 0                        ; 0                     ; 0                          ; 0                      ; 0                     ; 0                        ; 0                     ; 0                          ; 0                  ;
-; current_state.GEN_DELAY_P1 ; 0                    ; 0                     ; 0                        ; 0                     ; 0                          ; 0                      ; 0                     ; 0                        ; 0                     ; 1                          ; 1                  ;
-; current_state.WAIT_P1      ; 0                    ; 0                     ; 0                        ; 0                     ; 0                          ; 0                      ; 0                     ; 0                        ; 1                     ; 0                          ; 1                  ;
-; current_state.MEASURE_P1   ; 0                    ; 0                     ; 0                        ; 0                     ; 0                          ; 0                      ; 0                     ; 1                        ; 0                     ; 0                          ; 1                  ;
-; current_state.SHOW_P1      ; 0                    ; 0                     ; 0                        ; 0                     ; 0                          ; 0                      ; 1                     ; 0                        ; 0                     ; 0                          ; 1                  ;
-; current_state.INTERVAL     ; 0                    ; 0                     ; 0                        ; 0                     ; 0                          ; 1                      ; 0                     ; 0                        ; 0                     ; 0                          ; 1                  ;
-; current_state.GEN_DELAY_P2 ; 0                    ; 0                     ; 0                        ; 0                     ; 1                          ; 0                      ; 0                     ; 0                        ; 0                     ; 0                          ; 1                  ;
-; current_state.WAIT_P2      ; 0                    ; 0                     ; 0                        ; 1                     ; 0                          ; 0                      ; 0                     ; 0                        ; 0                     ; 0                          ; 1                  ;
-; current_state.MEASURE_P2   ; 0                    ; 0                     ; 1                        ; 0                     ; 0                          ; 0                      ; 0                     ; 0                        ; 0                     ; 0                          ; 1                  ;
-; current_state.SHOW_P2      ; 0                    ; 1                     ; 0                        ; 0                     ; 0                          ; 0                      ; 0                     ; 0                        ; 0                     ; 0                          ; 1                  ;
-; current_state.RESULT       ; 1                    ; 0                     ; 0                        ; 0                     ; 0                          ; 0                      ; 0                     ; 0                        ; 0                     ; 0                          ; 1                  ;
-+----------------------------+----------------------+-----------------------+--------------------------+-----------------------+----------------------------+------------------------+-----------------------+--------------------------+-----------------------+----------------------------+--------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |reaction_game|current_state                                                                                                                                                         ;
++--------------------------+----------------------+------------------------+-------------------------+-----------------------+--------------------------+-------------------------+--------------------+
+; Name                     ; current_state.RESULT ; current_state.INTERVAL ; current_state.SHOW_TIME ; current_state.MEASURE ; current_state.WAIT_DELAY ; current_state.GEN_DELAY ; current_state.IDLE ;
++--------------------------+----------------------+------------------------+-------------------------+-----------------------+--------------------------+-------------------------+--------------------+
+; current_state.IDLE       ; 0                    ; 0                      ; 0                       ; 0                     ; 0                        ; 0                       ; 0                  ;
+; current_state.GEN_DELAY  ; 0                    ; 0                      ; 0                       ; 0                     ; 0                        ; 1                       ; 1                  ;
+; current_state.WAIT_DELAY ; 0                    ; 0                      ; 0                       ; 0                     ; 1                        ; 0                       ; 1                  ;
+; current_state.MEASURE    ; 0                    ; 0                      ; 0                       ; 1                     ; 0                        ; 0                       ; 1                  ;
+; current_state.SHOW_TIME  ; 0                    ; 0                      ; 1                       ; 0                     ; 0                        ; 0                       ; 1                  ;
+; current_state.INTERVAL   ; 0                    ; 1                      ; 0                       ; 0                     ; 0                        ; 0                       ; 1                  ;
+; current_state.RESULT     ; 1                    ; 0                      ; 0                       ; 0                     ; 0                        ; 0                       ; 1                  ;
++--------------------------+----------------------+------------------------+-------------------------+-----------------------+--------------------------+-------------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; timer_ms[0]                                         ; Selector74          ; yes                    ;
-; timer_ms[1]                                         ; Selector74          ; yes                    ;
-; timer_ms[2]                                         ; Selector74          ; yes                    ;
-; timer_ms[3]                                         ; Selector74          ; yes                    ;
-; timer_ms[4]                                         ; Selector74          ; yes                    ;
-; timer_ms[5]                                         ; Selector74          ; yes                    ;
-; timer_ms[6]                                         ; Selector74          ; yes                    ;
-; timer_ms[7]                                         ; Selector74          ; yes                    ;
-; timer_ms[8]                                         ; Selector74          ; yes                    ;
-; timer_ms[9]                                         ; Selector74          ; yes                    ;
-; delay_counter_ms[0]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[1]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[2]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[3]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[4]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[5]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[6]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[7]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[8]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[9]                                 ; Selector73          ; yes                    ;
-; delay_counter_ms[10]                                ; Selector73          ; yes                    ;
-; delay_counter_ms[11]                                ; Selector73          ; yes                    ;
-; delay_counter_ms[12]                                ; Selector73          ; yes                    ;
-; delay_counter_ms[13]                                ; Selector73          ; yes                    ;
-; show_interval_counter_ms[1]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[0]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[3]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[4]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[5]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[6]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[7]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[8]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[9]                         ; Selector0           ; yes                    ;
-; show_interval_counter_ms[10]                        ; Selector0           ; yes                    ;
-; show_interval_counter_ms[11]                        ; Selector0           ; yes                    ;
-; show_interval_counter_ms[12]                        ; Selector0           ; yes                    ;
-; show_interval_counter_ms[2]                         ; Selector0           ; yes                    ;
-; display_digit_values[12]                            ; WideOr3             ; yes                    ;
-; display_digit_values[8]                             ; WideOr3             ; yes                    ;
-; display_digit_values[4]                             ; WideOr3             ; yes                    ;
-; display_digit_values[0]                             ; WideOr3             ; yes                    ;
-; display_digit_values[13]                            ; WideOr3             ; yes                    ;
-; display_digit_values[9]                             ; WideOr3             ; yes                    ;
-; display_digit_values[5]                             ; WideOr3             ; yes                    ;
-; display_digit_values[1]                             ; WideOr3             ; yes                    ;
-; display_digit_values[6]                             ; WideOr3             ; yes                    ;
-; display_digit_values[2]                             ; WideOr3             ; yes                    ;
-; display_digit_values[7]                             ; WideOr3             ; yes                    ;
-; display_digit_values[3]                             ; WideOr3             ; yes                    ;
-; reaction_time_p2[9]                                 ; Selector1           ; yes                    ;
-; reaction_time_p1[9]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[8]                                 ; Selector1           ; yes                    ;
-; reaction_time_p1[8]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[7]                                 ; Selector1           ; yes                    ;
-; reaction_time_p1[7]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[6]                                 ; Selector1           ; yes                    ;
-; reaction_time_p1[6]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[5]                                 ; Selector1           ; yes                    ;
-; reaction_time_p1[5]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[4]                                 ; Selector1           ; yes                    ;
-; reaction_time_p1[4]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[3]                                 ; Selector1           ; yes                    ;
-; reaction_time_p1[3]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[2]                                 ; Selector22          ; yes                    ;
-; reaction_time_p1[2]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[1]                                 ; Selector22          ; yes                    ;
-; reaction_time_p1[1]                                 ; Selector75          ; yes                    ;
-; reaction_time_p2[0]                                 ; Selector22          ; yes                    ;
-; reaction_time_p1[0]                                 ; Selector75          ; yes                    ;
-; Number of user-specified and inferred latches = 69  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; current_player[1]                      ; Stuck at GND due to stuck port data_in ;
+; current_player[0]                      ; Stuck at VCC due to stuck port data_in ;
+; display_digit_values[11,14,15]         ; Merged with display_digit_values[10]   ;
+; reaction_time_p2[0..8]                 ; Merged with reaction_time_p2[9]        ;
+; reaction_time_p2[9]                    ; Stuck at GND due to stuck port data_in ;
+; false_start_p2                         ; Stuck at GND due to stuck port data_in ;
+; current_state.RESULT                   ; Stuck at GND due to stuck port data_in ;
+; display_digit_values[10,13]            ; Stuck at GND due to stuck port data_in ;
+; winner_player[0,1]                     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 21 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                    ;
++-------------------+---------------------------+----------------------------------------------------------------+
+; Register name     ; Reason for Removal        ; Registers Removed due to This Register                         ;
++-------------------+---------------------------+----------------------------------------------------------------+
+; current_player[1] ; Stuck at GND              ; reaction_time_p2[9], false_start_p2, display_digit_values[10], ;
+;                   ; due to stuck port data_in ; display_digit_values[13], winner_player[1], winner_player[0]   ;
++-------------------+---------------------------+----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -322,12 +279,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 73    ;
-; Number of registers using Synchronous Clear  ; 31    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 73    ;
+; Total registers                              ; 143   ;
+; Number of registers using Synchronous Clear  ; 41    ;
+; Number of registers using Synchronous Load   ; 14    ;
+; Number of registers using Asynchronous Clear ; 143   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Clock Enable       ; 82    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -348,7 +305,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; an_internal[1]                          ; 1       ;
 ; an_internal[2]                          ; 1       ;
 ; an_internal[3]                          ; 1       ;
-; Total number of inverted registers = 11 ;         ;
+; lfsr_reg[1]                             ; 4       ;
+; lfsr_reg[0]                             ; 2       ;
+; lfsr_reg[2]                             ; 4       ;
+; lfsr_reg[13]                            ; 4       ;
+; lfsr_reg[12]                            ; 5       ;
+; lfsr_reg[11]                            ; 3       ;
+; lfsr_reg[10]                            ; 5       ;
+; lfsr_reg[9]                             ; 3       ;
+; lfsr_reg[8]                             ; 4       ;
+; lfsr_reg[7]                             ; 3       ;
+; lfsr_reg[6]                             ; 4       ;
+; lfsr_reg[5]                             ; 3       ;
+; lfsr_reg[4]                             ; 4       ;
+; lfsr_reg[3]                             ; 5       ;
+; lfsr_reg[15]                            ; 4       ;
+; lfsr_reg[14]                            ; 4       ;
+; Total number of inverted registers = 27 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -357,16 +330,40 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |reaction_game|debounce_count_start[3]    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |reaction_game|debounce_count_response[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |reaction_game|Mux4                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |reaction_game|debounce_count_start[0]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |reaction_game|debounce_count_response[1] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |reaction_game|show_counter_ms[0]         ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |reaction_game|delay_counter_ms[12]       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |reaction_game|display_digit_values[4]    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |reaction_game|display_digit_values[5]    ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |reaction_game|reaction_time_p1[4]        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |reaction_game|Mux4                       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |reaction_game|Mux7                       ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |reaction_game|Selector8                  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |reaction_game|Selector80                 ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 6 LEs                ; 14 LEs                 ; No         ; |reaction_game|Selector62                 ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; No         ; |reaction_game|Selector63                 ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 10 LEs               ; 16 LEs                 ; No         ; |reaction_game|Selector64                 ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |reaction_game|Selector67                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                ;
+; LPM_WIDTHD             ; 16             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_a5m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -374,24 +371,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 73                          ;
-;     CLR               ; 28                          ;
+; arriav_ff             ; 143                         ;
+;     CLR               ; 30                          ;
 ;     CLR SCLR          ; 31                          ;
-;     ENA CLR           ; 14                          ;
-; arriav_lcell_comb     ; 271                         ;
-;     arith             ; 68                          ;
-;         1 data inputs ; 68                          ;
-;     normal            ; 203                         ;
+;     ENA CLR           ; 58                          ;
+;     ENA CLR SCLR      ; 10                          ;
+;     ENA CLR SLD       ; 14                          ;
+; arriav_lcell_comb     ; 297                         ;
+;     arith             ; 138                         ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 104                         ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 14                          ;
+;     normal            ; 159                         ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 101                         ;
-;         4 data inputs ; 37                          ;
-;         5 data inputs ; 16                          ;
-;         6 data inputs ; 29                          ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 26                          ;
+;         6 data inputs ; 24                          ;
 ; boundary_port         ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.64                        ;
+; Max LUT depth         ; 15.10                       ;
+; Average LUT depth     ; 6.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -400,7 +403,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -410,7 +413,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Tue Sep 30 18:29:39 2025
+    Info: Processing started: Tue Sep 30 19:18:30 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off reaction_game -c reaction_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -418,184 +421,32 @@ Info (12021): Found 2 design units, including 1 entities, in source file reactio
     Info (12022): Found design unit 1: reaction_game-Behavioral File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 21
     Info (12023): Found entity 1: reaction_game File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 8
 Info (12127): Elaborating entity "reaction_game" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at reaction_game.vhd(69): object "random_delay_ms" assigned a value but never read File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 69
-Warning (10036): Verilog HDL or VHDL warning at reaction_game.vhd(79): object "false_start_p1" assigned a value but never read File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 79
-Warning (10036): Verilog HDL or VHDL warning at reaction_game.vhd(80): object "false_start_p2" assigned a value but never read File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 80
-Warning (10036): Verilog HDL or VHDL warning at reaction_game.vhd(81): object "winner_player" assigned a value but never read File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 81
-Warning (10631): VHDL Process Statement warning at reaction_game.vhd(205): inferring latch(es) for signal or variable "display_digit_values", which holds its previous value in one or more paths through the process File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Warning (10631): VHDL Process Statement warning at reaction_game.vhd(205): inferring latch(es) for signal or variable "reaction_time_p1", which holds its previous value in one or more paths through the process File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Warning (10631): VHDL Process Statement warning at reaction_game.vhd(205): inferring latch(es) for signal or variable "timer_ms", which holds its previous value in one or more paths through the process File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Warning (10631): VHDL Process Statement warning at reaction_game.vhd(205): inferring latch(es) for signal or variable "delay_counter_ms", which holds its previous value in one or more paths through the process File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Warning (10631): VHDL Process Statement warning at reaction_game.vhd(205): inferring latch(es) for signal or variable "show_interval_counter_ms", which holds its previous value in one or more paths through the process File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Warning (10631): VHDL Process Statement warning at reaction_game.vhd(205): inferring latch(es) for signal or variable "reaction_time_p2", which holds its previous value in one or more paths through the process File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[0]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[1]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[2]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[3]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[4]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[5]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[6]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[7]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[8]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p2[9]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[0]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[1]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[2]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[3]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[4]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[5]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[6]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[7]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[8]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[9]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[10]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[11]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "show_interval_counter_ms[12]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[0]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[1]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[2]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[3]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[4]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[5]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[6]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[7]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[8]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[9]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[10]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[11]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[12]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "delay_counter_ms[13]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[0]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[1]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[2]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[3]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[4]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[5]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[6]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[7]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[8]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "timer_ms[9]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[0]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[1]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[2]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[3]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[4]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[5]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[6]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[7]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[8]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "reaction_time_p1[9]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[0]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[1]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[2]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[3]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[4]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[5]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[6]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[7]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[8]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[9]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[10]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[11]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[12]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[13]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[14]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Info (10041): Inferred latch for "display_digit_values[15]" at reaction_game.vhd(205) File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-Warning (13012): Latch timer_ms[0] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[1] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[2] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[3] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[4] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[5] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[6] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[7] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[8] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch timer_ms[9] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.WAIT_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[12] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.SHOW_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[8] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[4] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[0] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[13] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.SHOW_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[9] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[5] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[1] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[6] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[2] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[7] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch display_digit_values[3] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.IDLE File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[9] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[9] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[8] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[8] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[7] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[7] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[6] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[6] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[5] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[5] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[4] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[4] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[3] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[3] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[2] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[2] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[1] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[1] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p2[0] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P2 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
-Warning (13012): Latch reaction_time_p1[0] has unsafe behavior File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 205
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.MEASURE_P1 File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 49
+Warning (10036): Verilog HDL or VHDL warning at reaction_game.vhd(94): object "show_time_active" assigned a value but never read File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 94
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 188
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 188
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/reaction_game.vhd Line: 188
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "16"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_a5m.tdf
+    Info (12023): Found entity 1: lpm_divide_a5m File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/db/lpm_divide_a5m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/db/sign_div_unsign_dnh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
+    Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/adriw/Documents/Github/FPGA-ReactionTimeGame/db/alt_u_div_03f.tdf Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 286 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 327 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 270 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4982 megabytes
-    Info: Processing ended: Tue Sep 30 18:29:47 2025
+    Info (21061): Implemented 311 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4961 megabytes
+    Info: Processing ended: Tue Sep 30 19:18:38 2025
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:16
 
 
