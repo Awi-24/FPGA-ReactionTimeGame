@@ -1,9 +1,0 @@
-
-State Machine - |reaction_time|current_state
-Name current_state.S_DISPLAY_TIME current_state.S_DISPLAY_WINNER current_state.S_WINNER current_state.S_TIMING current_state.S_RANDOM_DELAY current_state.S_IDLE 
-current_state.S_IDLE 0 0 0 0 0 0 
-current_state.S_RANDOM_DELAY 0 0 0 0 1 1 
-current_state.S_TIMING 0 0 0 1 0 1 
-current_state.S_WINNER 0 0 1 0 0 1 
-current_state.S_DISPLAY_WINNER 0 1 0 0 0 1 
-current_state.S_DISPLAY_TIME 1 0 0 0 0 1 
